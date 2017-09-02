@@ -1,0 +1,205 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  width: 100%;
+  background-color: #2F2235;
+}
+header,
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-weight: 300;
+}
+h2 {
+  color: #FFFFFF;
+  margin-right: 50px;
+}
+
+#pattrn {
+  color: white;
+  margin-left: 50px;
+}
+#party {
+  color: #34D1D1;
+}
+
+#accordian-header {
+  color: #000000;
+  font-size: 20px;
+}
+
+.button {
+  height: 50px;
+  width: 300px;
+  color: #FFFFFF;
+  font-size: 20px;
+  background-color: #2F2235;
+  border: 0px;
+  margin-top: 50px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+/* Acordian Tabs  */
+
+.tab-content h3 {
+  font-weight: 600;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #D1D2D3;
+}
+
+.tab-body {
+  padding: 15px;
+}
+.main-container {
+  position: relative;
+  max-width: 600px;
+}
+
+ul.tabs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ul.tabs li {
+  position: relative;
+  width: 25%;
+  top: 1px;
+  padding: 10px;
+  text-align: center;
+  background: #F2F2F2;
+  border: 1px solid white;
+  border-bottom: 1px solid #D1D2D3;
+  cursor: pointer;
+}
+
+ul.tabs li.show {
+  background: white;
+  font-weight: 600;
+  color: #666666;
+  border: 1px solid #D1D2D3;
+  border-bottom: 1px solid white;
+}
+
+.tab-container {
+  border: 1px solid #D1D2D3;
+}
+
+.tab-content.show {
+  display: flex;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content img {
+  padding: 15px;
+}
+
+.main-container.mobile {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header div {
+    margin: 10px;
+  }
+  header h1 {
+    margin: 0px;
+  }
+  header h2 {
+    margin: 10px;
+    font-size: 16px;
+  }
+  #pattrn {
+    margin: 0px;
+  }
+
+  #accordian-header {
+    font-size: 18px;
+    margin: 30px;
+  }
+
+  /* accordian tabs */
+
+  .main-container.desktop {
+    display: none;
+  }
+  .main-container.mobile {
+    display: flex;
+    min-width: 320px;
+  }
+  div.tabs-container {
+    border: 1px solid #D1D2D3;
+  }
+  div.tab-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  div.tabs {
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    background-color: #F2F2F2;
+    width: 100%;
+  }
+  div.tabs.show {
+    font-weight: 600;
+    border: 0px;
+    background-color: #FFFFFF;
+  }
+  #plus {
+    /* display: inline-block; */
+    font-size: 50px;
+    font-weight: 300;
+    float: right;
+    margin: 0;
+    vertical-align: middle;
+    line-height: 20px;
+  }
+  .tab-content p {
+    font-size: 14px;
+    margin-top: 18px;
+  }
+  .tab-content {
+    flex-direction: column;
+  }
+  .tab-content img {
+  padding: 0px;
+   max-height: 130px;
+  }
+
+}
+
+/*  */
