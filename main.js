@@ -1,22 +1,10 @@
-$("ul.tabs li").click( (e) => {
-  let className = $(e.target).attr("class")
+$(".tabs").click(e => {
+  let target = $(e.target).attr("id");
+  let targetId = target[target.length - 1]
 
-  $("ul.tabs li").removeClass("show")
-  $('.tab-content').removeClass("show")
-  $(`.${className}`).toggleClass("show")
-})
+  $(".content-container").addClass("hide");
+  $(`.tab-container .${targetId}`).toggleClass("hide");
 
-$("div.tabs").click( (e) => {
-  let className = $(e.target).attr("id")
-  let plusSign = $(e.target).next()[0]
-  
   $(".tabs").removeClass("show")
-  $('.tab-content').removeClass("show")
-
-  $(e.target).toggleClass("show")
-  $(`.tab-content.${className}`).toggleClass("show")
-
-  $("#plus").text("+")
-  $(plusSign).text("-")
- console.log(plusSign)
-})
+  $(e.target).addClass("show")
+});
