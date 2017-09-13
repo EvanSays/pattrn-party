@@ -8,3 +8,9 @@ $(".tabs").click(e => {
   $(".tabs").removeClass("show")
   $(e.target).addClass("show")
 });
+
+$(".menu").click(e => {
+  $(".search-container").toggleClass("hide")
+  $(".link-container").toggleClass("hide")
+})
+
